@@ -17,13 +17,19 @@
    color: $font-color;
 }
 
-.instruction {
+.description {
    font-size: 16px;
    line-height: 28px;
    color: $lighten-font-color;
 }
 
-.instruction__description {
+.instruction {
+   margin-bottom: 50px;
+   font-size: 14px;
+   color: $lighten-font-color;
+}
+
+.instruction__item {
    display: block;
    margin-top: 10px;
    text-align: center;
@@ -31,7 +37,7 @@
 
 .sort {
    position: relative;
-   padding: 100px 0 50px;
+   padding: 100px 0 20px;
 }
 
 .sort__list {
@@ -69,17 +75,20 @@
 .sort__target {
    position: absolute;
    top: 50px;
+   padding: 5px 10px;
    transition: 0.3s;
-   color: $font-color;
+   border-radius: 20px;
+   background-color: $main-color;
+   color: $white-color;
 
    &::after {
       content: "";
       position: absolute;
       left: 50%;
-      bottom: -40px;
+      bottom: -35px;
       transform: translateX(-2px);
       width: 4px;
-      height: 40px;
+      height: 35px;
       background-color: $main-color;
    }
 }
@@ -125,7 +134,7 @@
 .info {
    margin-bottom: 50px;
    text-align: center;
-   font-size: 14px;
+   font-size: 20px;
    color: $lighten-font-color;
 }
 
