@@ -6,7 +6,7 @@ import { SortItem } from './sortItem.js';
 export class SortData {
    constructor({sortedElementsCount, nextButton, target, infoField}) {
       this.sortIndex = 1;
-      this.targetLeftValue = 145;
+      this.targetLeftValue = 137;
       this.sortedElementsCount = sortedElementsCount;
       this.sortArray = [];
       this.target = target;
@@ -51,11 +51,12 @@ export class SortData {
       this.nextButton.removeEventListener('click', this.buttonClickHandler);
       this.nextButton.addEventListener('click', this.buttonClickHandler);
       this.sortIndex = 1;
-      this.targetLeftValue = 145;
+      this.targetLeftValue = 137;
       this.sortArray = [];
       this.lastSortIndex = this.sortedElementsCount;
       this.target.style.left = `${this.targetLeftValue}px`;
       this.infoField.textContent = 'Для старта нажмите кнопку "Следующий шаг"';
+      this.target.classList.remove('sort__target--disabled');
       document.querySelector('.instruction').classList.remove('instruction--active');
    }
 
@@ -79,7 +80,7 @@ export class SortData {
          this.sortArray[this.sortIndex].addClass('sort__item--current');
          this.infoField.innerHTML = (this.sortArray[this.sortIndex - 1].value === this.sortArray[this.sortIndex].value)
             ? `Элементы <span class="info__current">${this.sortArray[this.sortIndex - 1].value}</span> и <span>${this.sortArray[this.sortIndex].value}</span> равны`
-            : `Элемент <span>${this.sortArray[this.sortIndex - 1].value}</span> меньше элемента <span class="info__current">${this.sortArray[this.sortIndex].value}</span>. Действия не требуются`;
+            : `Пропускаем элемент <span>${this.sortArray[this.sortIndex - 1].value}</span>, он меньше элемента <span class="info__current">${this.sortArray[this.sortIndex].value}</span>`;
       }
 
       // Перемещение таргета на следующий элемент
@@ -93,6 +94,7 @@ export class SortData {
          this.sortArray[0].addClass('sort__item--stated');
          this.infoField.textContent = 'Соритровка завершена!';
          this.nextButton.removeEventListener('click', this.buttonClickHandler);
+         this.target.classList.add('sort__target--disabled');
          document.querySelector('.instruction').classList.add('instruction--active');
       }
 
@@ -102,7 +104,7 @@ export class SortData {
          // Уменьшение конечного индекса сортировки
          this.lastSortIndex--;
          // Перемещение таргета на первы элемент
-         this.targetLeftValue = 145;
+         this.targetLeftValue = 137;
          this.target.style.left = `${this.targetLeftValue}px`;
          this.sortArray[this.sortIndex - 1].addClass('sort__item--current');
          this.sortArray[this.lastSortIndex].removeClass('sort__item--current');

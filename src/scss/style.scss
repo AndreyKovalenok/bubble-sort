@@ -25,7 +25,8 @@
 
 .instruction {
    display: none;
-   margin-top: -20px;
+   margin-top: -40px;
+   margin-bottom: 20px;
    text-align: center;
    font-size: 14px;
    line-height: 20px;
@@ -83,6 +84,10 @@
    background-color: $main-color;
    color: $white-color;
 
+   &--disabled {
+      display: none;
+   }
+
    &::after {
       content: "";
       position: absolute;
@@ -112,7 +117,6 @@
    font-size: 16px;
 
    &--next {
-      margin-right: 15px;
       border-color: $main-color;
       background-color: $main-color;
       color: $white-color;
@@ -124,6 +128,7 @@
    }
 
    &--refresh {
+      margin-right: 15px;
       color: $main-color;
 
       &:hover {
