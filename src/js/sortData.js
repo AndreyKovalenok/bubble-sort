@@ -55,7 +55,7 @@ export class SortData {
       this.sortArray = [];
       this.lastSortIndex = this.sortedElementsCount;
       this.target.style.left = `${this.targetLeftValue}px`;
-      this.infoField.textContent = 'Для движения по элементам нажимайте кнопку "Следующая интерация"';
+      this.infoField.textContent = 'Для старта нажмите кнопку "Следующий шаг"';
    }
 
    /**
