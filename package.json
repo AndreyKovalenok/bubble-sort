@@ -1,22 +1,22 @@
 {
-  "name": "bubble-sort",
-  "version": "1.0.0",
-  "description": "",
-  "devDependencies": {
-    "autoprefixer": "9.5.x",
-    "browser-sync": "2.26.x",
-    "gulp": "4.0.x",
-    "gulp-csso": "^4.0.1",
-    "gulp-plumber": "1.2.x",
-    "gulp-postcss": "8.0.x",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "4.0.x",
-    "gulp-sourcemaps": "2.6.x"
-  },
-  "scripts": {
-    "start": "gulp start"
-  },
-  "main": "gulpfile.js",
-  "author": "Andrey Kovalenok",
-  "license": "ISC"
+   "name": "bubble-sort",
+   "version": "1.0.0",
+   "description": "",
+   "devDependencies": {
+      "autoprefixer": "9.5.x",
+      "browser-sync": "2.26.x",
+      "gulp": "4.0.x",
+      "gulp-csso": "^4.0.1",
+      "gulp-plumber": "1.2.x",
+      "gulp-postcss": "8.0.x",
+      "gulp-rename": "^2.0.0",
+      "gulp-sass": "4.0.x",
+      "gulp-sourcemaps": "2.6.x"
+   },
+   "scripts": {
+      "start": "gulp start"
+   },
+   "main": "gulpfile.js",
+   "author": "Andrey Kovalenok",
+   "license": "ISC"
 }
