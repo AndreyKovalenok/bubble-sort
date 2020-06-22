@@ -6,7 +6,7 @@ import { SortItem } from './sortItem.js';
 export class SortData {
    constructor({sortedElementsCount, nextButton, target, infoField}) {
       this.sortIndex = 1;
-      this.targetLeftValue = 155;
+      this.targetLeftValue = 145;
       this.sortedElementsCount = sortedElementsCount;
       this.sortArray = [];
       this.target = target;
@@ -51,11 +51,11 @@ export class SortData {
       this.nextButton.removeEventListener('click', this.buttonClickHandler);
       this.nextButton.addEventListener('click', this.buttonClickHandler);
       this.sortIndex = 1;
-      this.targetLeftValue = 155;
+      this.targetLeftValue = 145;
       this.sortArray = [];
       this.lastSortIndex = this.sortedElementsCount;
       this.target.style.left = `${this.targetLeftValue}px`;
-      this.infoField.textContent = 'Для выполнения итерации нажмите кнопку "Следующая итерация"';
+      this.infoField.textContent = 'Для движения по элементам нажимайте кнопку "Следующая интерация"';
    }
 
    /**
@@ -100,7 +100,7 @@ export class SortData {
          // Уменьшение конечного индекса сортировки
          this.lastSortIndex--;
          // Перемещение таргета на первы элемент
-         this.targetLeftValue = 155;
+         this.targetLeftValue = 145;
          this.target.style.left = `${this.targetLeftValue}px`;
          this.sortArray[this.sortIndex - 1].addClass('sort__item--current');
          this.sortArray[this.lastSortIndex].removeClass('sort__item--current');
