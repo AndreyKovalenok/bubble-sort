@@ -14,12 +14,13 @@
    font-weight: bold;
    text-align: center;
    margin-bottom: 30px;
+   color: $font-color;
 }
 
 .instruction {
    font-size: 16px;
    line-height: 28px;
-   color: $font-color;
+   color: $lighten-font-color;
 }
 
 .instruction__description {
@@ -90,14 +91,14 @@
 .controls__btn {
    width: 250px;
    margin: 0 auto;
-   padding: 10px 0;
+   padding: 12px 0;
    transition: 0.3s;
    cursor: pointer;
    outline: none;
-   border: 2px solid $item-bg-color;
+   border: 2px solid $main-color;
    border-radius: 20px;
    background-color: transparent;
-   font-size: 20px;
+   font-size: 16px;
 
    &--next {
       margin-right: 15px;
@@ -124,8 +125,8 @@
 .info {
    margin-bottom: 50px;
    text-align: center;
-   font-size: 24px;
-   color: $font-color;
+   font-size: 14px;
+   color: $lighten-font-color;
 }
 
 .info__current {
