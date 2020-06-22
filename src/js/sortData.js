@@ -4,7 +4,7 @@ import { SortItem } from './sortItem.js';
  * Класс, описывающий алгоритм, отрисовку элементов и их перемещение
  */
 export class SortData {
-   constructor({sortedElementsCount, nextButton, target, infoField}) {
+   constructor({sortedElementsCount, nextButton, refreshButton, target, infoField}) {
       this.sortIndex = 1;
       this.targetLeftValue = 137;
       this.sortedElementsCount = sortedElementsCount;
@@ -12,6 +12,7 @@ export class SortData {
       this.target = target;
       this.infoField = infoField;
       this.nextButton = nextButton;
+      this.refreshButton = refreshButton
    }
 
    getRandomNumber = (min, max) => Math.floor(Math.random() * max + min);
@@ -54,8 +55,12 @@ export class SortData {
       this.targetLeftValue = 137;
       this.sortArray = [];
       this.lastSortIndex = this.sortedElementsCount;
+
       this.target.style.left = `${this.targetLeftValue}px`;
       this.infoField.textContent = 'Для старта нажмите кнопку "Следующий шаг"';
+      this.nextButton.classList.remove('controls__btn--disabled');
+      this.refreshButton.classList.add('controls__btn--secondary');
+      this.refreshButton.classList.remove('controls__btn--main');
       this.target.classList.remove('sort__target--disabled');
       document.querySelector('.instruction').classList.remove('instruction--active');
    }
@@ -94,6 +99,9 @@ export class SortData {
          this.sortArray[0].addClass('sort__item--stated');
          this.infoField.textContent = 'Соритровка завершена!';
          this.nextButton.removeEventListener('click', this.buttonClickHandler);
+         this.nextButton.classList.add('controls__btn--disabled');
+         this.refreshButton.classList.remove('controls__btn--secondary');
+         this.refreshButton.classList.add('controls__btn--main');
          this.target.classList.add('sort__target--disabled');
          document.querySelector('.instruction').classList.add('instruction--active');
       }

@@ -25,8 +25,8 @@
 
 .instruction {
    display: none;
-   margin-top: -40px;
-   margin-bottom: 20px;
+   margin-top: -60px;
+   margin-bottom: 40px;
    text-align: center;
    font-size: 14px;
    line-height: 20px;
@@ -39,6 +39,7 @@
 
 .sort {
    position: relative;
+   margin-bottom: 20px;
    padding: 100px 0 20px;
 }
 
@@ -115,7 +116,7 @@
    background-color: transparent;
    font-size: 16px;
 
-   &--next {
+   &--main {
       border-color: $main-color;
       background-color: $main-color;
       color: $white-color;
@@ -126,7 +127,7 @@
       }
    }
 
-   &--refresh {
+   &--secondary {
       margin-right: 15px;
       color: $main-color;
 
@@ -136,10 +137,14 @@
          color: $white-color;
       }
    }
+
+   &--disabled {
+      display: none;
+   }
 }
 
 .info {
-   margin-bottom: 50px;
+   margin-bottom: 70px;
    text-align: center;
    font-size: 20px;
    color: $lighten-font-color;

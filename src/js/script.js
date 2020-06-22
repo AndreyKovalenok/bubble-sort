@@ -6,8 +6,8 @@ import { SortData } from './sortData.js';
 const SORTED_ELEMENTS_COUNT = 9;
 
 const sortListNode = document.querySelector('.sort__list');
-const nextButton = document.querySelector('.controls__btn--next');
-const refreshButton = document.querySelector('.controls__btn--refresh');
+const nextButton = document.querySelector('.controls__btn--main');
+const refreshButton = document.querySelector('.controls__btn--secondary');
 const infoField = document.querySelector('.info');
 const target = document.querySelector('.sort__target');
 
@@ -17,6 +17,7 @@ const target = document.querySelector('.sort__target');
 const sortData = new SortData({
    sortedElementsCount: SORTED_ELEMENTS_COUNT,
    nextButton: nextButton,
+   refreshButton: refreshButton,
    target,
    infoField
 });
