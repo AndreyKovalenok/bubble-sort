@@ -1,16 +1,16 @@
 html {
-  box-sizing: border-box;
+   box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+   box-sizing: border-box;
 }
 
 body {
-  font-family: 'MuseoModerno', cursive, sans-serif;
-  margin: 0;
+   font-family: 'Roboto', sans-serif;
+   margin: 0;
 }
 
 p,
@@ -20,36 +20,36 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0;
-  padding: 0;
+   margin: 0;
+   padding: 0;
 }
 
 button {
-  padding: 0;
+   padding: 0;
 }
 
 a {
-  text-decoration: none;
+   text-decoration: none;
 }
 
 ul,
 li {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+   margin: 0;
+   padding: 0;
+   list-style: none;
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+   max-width: 100%;
+   height: auto;
 }
 
 .visually-hidden {
-  position: absolute;
-  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-  padding: 0;
-  border: 0;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
+   position: absolute;
+   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+   padding: 0;
+   border: 0;
+   height: 1px;
+   width: 1px;
+   overflow: hidden;
 }

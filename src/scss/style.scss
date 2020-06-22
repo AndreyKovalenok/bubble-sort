@@ -1,125 +1,118 @@
 @import "global.scss";
 @import "variables.scss";
 
-body {
-  background: linear-gradient(to bottom, $darken-main-color, $main-color);
-}
-
 .wrapper {
-  max-width: 1000px;
-  height: 100vh;
-  padding: 100px 0;
-  margin: 0 auto;
+   max-width: 1000px;
+   height: 100vh;
+   padding: 100px 0;
+   margin: 0 auto;
 }
 
 .title {
-  font-size: 40px;
-  line-height: 40px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 30px;
-  color: $white-color
+   font-size: 40px;
+   line-height: 40px;
+   font-weight: bold;
+   text-align: center;
+   margin-bottom: 30px;
 }
 
 .instruction {
-  color: $white-color;
+   font-size: 16px;
+   line-height: 28px;
+   color: $font-color;
 }
 
 .instruction__description {
-  display: block;
-  margin-top: 10px;
-  text-align: center;
+   display: block;
+   margin-top: 10px;
+   text-align: center;
 }
 
 .sort {
-  position: relative;
-  padding: 100px 0 50px;
+   position: relative;
+   padding: 100px 0 50px;
 }
 
 .sort__list {
-  display: flex;
-  justify-content: space-between;
-  max-width: 730px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid $main-color;
-  border-radius: 15px;
+   display: flex;
+   justify-content: space-between;
+   max-width: 730px;
+   margin: 0 auto;
+   padding: 20px;
+   border-radius: 15px;
+   background-color: $bg-color;
 }
 
 .sort__item {
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  font-size: 20px;
-  line-height: 50px;
-  border: 2px solid $white-color;
-  border-radius: 15px;
-  transition: 0.3s;
-  background-color: $white-color;
-  color: $darken-main-color;
+   width: 50px;
+   height: 50px;
+   text-align: center;
+   font-size: 20px;
+   line-height: 50px;
+   border-radius: 15px;
+   transition: 0.3s;
+   background-color: $item-bg-color;
+   color: $white-color;
 
-  &--prev {
-    border-color: red;
-  }
-
-  &--next {
-    border-color: green;
-  }
+   &--current {
+      background-color: $main-color;
+      color: $white-color;
+   }
 }
 
 .sort__target {
-  position: absolute;
-  top: 50px;
-  transition: 0.3s;
-  color: $white-color;
+   position: absolute;
+   top: 50px;
+   transition: 0.3s;
+   color: $font-color;
 
-  &::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -40px;
-    transform: translateX(-2px);
-    width: 4px;
-    height: 40px;
-    background-color: $white-color;
-  }
+   &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -40px;
+      transform: translateX(-2px);
+      width: 4px;
+      height: 40px;
+      background-color: $main-color;
+   }
 }
 
 .controls {
-  text-align: center;
+   text-align: center;
 }
 
 .controls__btn {
-  width: 250px;
-  margin: 0 auto;
-  padding: 10px 0;
-  transition: 0.3s;
-  cursor: pointer;
-  outline: none;
-  border: 2px solid $white-color;
-  border-radius: 20px;
-  background-color: transparent;
-  font-size: 20px;
-  color: $white-color;
+   width: 250px;
+   margin: 0 auto;
+   padding: 10px 0;
+   transition: 0.3s;
+   cursor: pointer;
+   outline: none;
+   border: 2px solid $item-bg-color;
+   border-radius: 20px;
+   background-color: transparent;
+   font-size: 20px;
+   color: $main-color;
 
-  &--next {
-    margin-right: 15px;
-  }
+   &--next {
+      margin-right: 15px;
+   }
 
-  &:hover {
-    box-shadow: 0 0 3px 0 $white-color;
-    background-color: $white-color;
-    color: $darken-main-color;
-  }
+   &:hover {
+      border-color: $main-color;
+      background-color: $main-color;
+      color: $white-color;
+   }
 }
 
 .info {
-  margin-bottom: 50px;
-  text-align: center;
-  font-size: 24px;
-  color: $white-color;
+   margin-bottom: 50px;
+   text-align: center;
+   font-size: 24px;
+   color: $font-color;
+}
 
-  span {
-    color: red;
-  }
+.info__current {
+   color: $main-color;
 }

@@ -12,13 +12,13 @@ const infoField = document.querySelector('.info');
 const target = document.querySelector('.sort__target');
 
 /**
- * Сущность, хранязая состояние алгоритма
+ * Сущность, хранящая состояние алгоритма
  */
 const sortData = new SortData({
-  sortedElementsCount: SORTED_ELEMENTS_COUNT,
-  nextButton: nextButton,
-  target,
-  infoField
+   sortedElementsCount: SORTED_ELEMENTS_COUNT,
+   nextButton: nextButton,
+   target,
+   infoField
 });
 sortListNode.appendChild(sortData.render());
 sortData.init();
@@ -27,7 +27,7 @@ sortData.init();
  * Обнуление состояния
  */
 refreshButton.addEventListener('click', () => {
-  sortListNode.innerHTML = '';
-  sortData.refresh();
-  sortListNode.appendChild(sortData.render());
+   sortListNode.innerHTML = '';
+   sortData.refresh();
+   sortListNode.appendChild(sortData.render());
 });
