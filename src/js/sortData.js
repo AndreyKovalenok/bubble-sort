@@ -81,10 +81,13 @@ export class SortData {
             : `Элемент <span>${this.sortArray[this.sortIndex - 1].value}</span> меньше элемента <span class="info__current">${this.sortArray[this.sortIndex].value}</span>. Действия не требуются`;
       }
 
+      // Перемещение таргета на следующий элемент
       this.targetLeftValue += 80;
       this.target.style.left = `${this.targetLeftValue}px`;
+      // Увеличение текущего индекса сортировки
       this.sortIndex++;
 
+      // Конец сортировки
       if (this.lastSortIndex === 2) {
          this.sortArray[0].addClass('sort__item--stated');
          this.infoField.textContent = 'Соритровка завершена!';
@@ -92,8 +95,11 @@ export class SortData {
       }
 
       if (this.sortIndex === this.lastSortIndex) {
+         // Сборс текущего индекса соритровки
          this.sortIndex = 1;
+         // Уменьшение конечного индекса сортировки
          this.lastSortIndex--;
+         // Перемещение таргета на первы элемент
          this.targetLeftValue = 155;
          this.target.style.left = `${this.targetLeftValue}px`;
          this.sortArray[this.sortIndex - 1].addClass('sort__item--current');
