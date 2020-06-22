@@ -4,9 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bubble sort</title>
+  <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  <h1>Bubble sort</h1>
+  <div class="wrapper">
+    <h1 class="title">Сортировка пузырьком</h1>
+    <p class="instruction">
+      Соритровка пузырьком - Алгоритм состоит из повторяющихся проходов по сортируемому массиву. 
+      За каждый проход элементы последовательно сравниваются попарно и, если порядок в паре неверный, 
+      выполняется обмен элементов. Проходы по массиву повторяются N-1 раз или до 
+      тех пор, пока на очередном проходе не окажется, что обмены больше не нужны, что означает —
+      массив отсортирован. При каждом проходе алгоритма по внутреннему циклу, очередной наибольший 
+      элемент массива ставится на своё место в конце массива рядом с предыдущим «наибольшим элементом», 
+      а наименьший элемент перемещается на одну позицию к началу массива
+      <span class="instruction__description">
+        Для движения по элементам нажимайте кнопку "Следующая интерация". 
+      </span>
+      <span class="instruction__description">Для того чтобы начать сначала, необходимо нажать кнпоку "Начать заново"</span>
+    </p>
+
+    <div class="sort">
+      <div class="sort__list">
+      </div>
+      <span class="sort__target">current</span>
+    </div>
+
+    <p class="info">Для выполнения итерации нажмите кнопку "Следующая итерация"</p>
+
+    <div class="controls">
+      <button type="button" class="controls__btn controls__btn--next">
+        Следующая итерация
+      </button>
+      <button type="button" class="controls__btn controls__btn--refresh">
+        Начать заново
+      </button>
+    </div>
+  </div>
+
+  <script type="module" src="js/script.js"></script>
 </body>
 </html>
