@@ -24,19 +24,21 @@
 }
 
 .instruction {
-   margin-bottom: 50px;
-   font-size: 14px;
-   color: $lighten-font-color;
-}
-
-.instruction__item {
-   display: block;
-   margin-top: 10px;
+   display: none;
+   margin-top: -20px;
    text-align: center;
+   font-size: 14px;
+   line-height: 20px;
+   color: $lighten-font-color;
+
+   &--active {
+      display: block;
+   }
 }
 
 .sort {
    position: relative;
+   margin-bottom: 50px;
    padding: 100px 0 20px;
 }
 
@@ -117,6 +119,7 @@
 
       &:hover {
          background-color: rgba($main-color, 0.8);
+         border-color: rgba($main-color, 0.8);
       }
    }
 
