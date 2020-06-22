@@ -56,6 +56,7 @@ export class SortData {
       this.lastSortIndex = this.sortedElementsCount;
       this.target.style.left = `${this.targetLeftValue}px`;
       this.infoField.textContent = 'Для старта нажмите кнопку "Следующий шаг"';
+      document.querySelector('.instruction').classList.remove('instruction--active');
    }
 
    /**
@@ -92,6 +93,7 @@ export class SortData {
          this.sortArray[0].addClass('sort__item--stated');
          this.infoField.textContent = 'Соритровка завершена!';
          this.nextButton.removeEventListener('click', this.buttonClickHandler);
+         document.querySelector('.instruction').classList.add('instruction--active');
       }
 
       if (this.sortIndex === this.lastSortIndex) {
