@@ -58,6 +58,11 @@
       background-color: $main-color;
       color: $white-color;
    }
+
+   &--stated {
+      background-color: $stated-color;
+      color: $white-color;
+   }
 }
 
 .sort__target {
@@ -93,16 +98,26 @@
    border-radius: 20px;
    background-color: transparent;
    font-size: 20px;
-   color: $main-color;
 
    &--next {
       margin-right: 15px;
-   }
-
-   &:hover {
       border-color: $main-color;
       background-color: $main-color;
       color: $white-color;
+
+      &:hover {
+         background-color: rgba($main-color, 0.8);
+      }
+   }
+
+   &--refresh {
+      color: $main-color;
+
+      &:hover {
+         border-color: $main-color;
+         background-color: $main-color;
+         color: $white-color;
+      }
    }
 }
 

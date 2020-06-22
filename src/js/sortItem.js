@@ -8,12 +8,12 @@ export class SortItem {
          this.current = current;
    }
 
-   addClass = () => {
-      this.div.classList.add('sort__item--current');
+   addClass = (className) => {
+      this.div.classList.add(className);
    }
 
-   removeClass = () => {
-      this.div.classList.remove('sort__item--current');
+   removeClass = (className) => {
+      this.div.classList.remove(className);
    }
 
    /**

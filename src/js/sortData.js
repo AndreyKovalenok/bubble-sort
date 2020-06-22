@@ -66,16 +66,16 @@ export class SortData {
          this.infoField.innerHTML = `Меняем местами элементы <span class="info__current">${this.sortArray[this.sortIndex - 1].value}</span> и <span>${this.sortArray[this.sortIndex].value}</span>`;
          this.sortArray[this.sortIndex].setTransform(-80);
          this.sortArray[this.sortIndex - 1].setTransform(80);
-         this.sortArray[this.sortIndex].removeClass();
-         this.sortArray[this.sortIndex - 1].addClass();
+         this.sortArray[this.sortIndex].removeClass('sort__item--current');
+         this.sortArray[this.sortIndex - 1].addClass('sort__item--current');
 
          let temp = this.sortArray[this.sortIndex];
          this.sortArray[this.sortIndex] = this.sortArray[this.sortIndex - 1];
          this.sortArray[this.sortIndex - 1] = temp;
 
       } else {
-         this.sortArray[this.sortIndex - 1].removeClass();
-         this.sortArray[this.sortIndex].addClass();
+         this.sortArray[this.sortIndex - 1].removeClass('sort__item--current');
+         this.sortArray[this.sortIndex].addClass('sort__item--current');
          this.infoField.innerHTML = (this.sortArray[this.sortIndex - 1].value === this.sortArray[this.sortIndex].value)
             ? `Элементы <span class="info__current">${this.sortArray[this.sortIndex - 1].value}</span> и <span>${this.sortArray[this.sortIndex].value}</span> равны`
             : `Элемент <span>${this.sortArray[this.sortIndex - 1].value}</span> меньше элемента <span class="info__current">${this.sortArray[this.sortIndex].value}</span>. Действия не требуются`;
@@ -86,7 +86,7 @@ export class SortData {
       this.sortIndex++;
 
       if (this.lastSortIndex === 2) {
-         this.sortArray[0].addClass();
+         this.sortArray[0].addClass('sort__item--stated');
          this.infoField.textContent = 'Соритровка завершена!';
          this.nextButton.removeEventListener('click', this.buttonClickHandler);
       }
@@ -96,6 +96,9 @@ export class SortData {
          this.lastSortIndex--;
          this.targetLeftValue = 155;
          this.target.style.left = `${this.targetLeftValue}px`;
+         this.sortArray[this.sortIndex - 1].addClass('sort__item--current');
+         this.sortArray[this.lastSortIndex].removeClass('sort__item--current');
+         this.sortArray[this.lastSortIndex].addClass('sort__item--stated');
       }
    }
 }
