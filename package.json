@@ -4,7 +4,7 @@
    "description": "",
    "devDependencies": {
       "autoprefixer": "9.5.x",
-      "browser-sync": "2.26.x",
+      "browser-sync": "2.27.x",
       "gulp": "4.0.x",
       "gulp-csso": "^4.0.1",
       "gulp-plumber": "1.2.x",
